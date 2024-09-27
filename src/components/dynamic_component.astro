@@ -1,0 +1,11 @@
+---
+interface Props {
+  timeout: number;
+}
+
+const { timeout } = Astro.props as Props;
+
+await new Promise((resolve) => setTimeout(resolve, timeout));
+---
+
+<div>{new Date().toISOString()}</div>;

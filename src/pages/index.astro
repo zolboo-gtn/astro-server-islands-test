@@ -1,6 +1,5 @@
 ---
 import DynamicComponent from '../components/dynamic_component.astro';
-import Loader from '../components/loader.astro';
 import StaticComponent from '../components/static_component.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -10,10 +9,10 @@ import Layout from '../layouts/Layout.astro';
 	<main>
 		<StaticComponent />
 		<DynamicComponent server:defer timeout={1000} >
-			<Loader slot="fallback" />
+			<div slot="fallback">Loading...</div>
 		</DynamicComponent>
 		<DynamicComponent server:defer timeout={2000} >
-			<Loader slot="fallback" />
+			<div slot="fallback">Loading...</div>
 		</DynamicComponent>
 	</main>
 </Layout>

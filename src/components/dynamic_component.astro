@@ -5,7 +5,7 @@ interface Props {
 
 const { timeout } = Astro.props as Props;
 
-const session = Astro.cookies.get("session")
+const session = Astro.cookies.get("session")?.value
 await new Promise((resolve) => setTimeout(resolve, timeout));
 ---
 
